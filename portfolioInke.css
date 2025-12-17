@@ -1,0 +1,94 @@
+:root {
+    --bg-color: #f0f0f0;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --border-radius: 25px;
+    --shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Bento Box Items */
+.bento-item {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.full-width { grid-column: span 2; }
+
+/* Specifieke styling voor de profielkaart */
+.profile-card {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-img-placeholder {
+    width: 200px;
+    height: 200px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    background-image: url('data:image/png;base64,iVBOR...'); /* Voeg hier je foto toe */
+    background-size: cover;
+}
+
+/* Navigatie */
+.navbar {
+    background: #e5dfdf;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Grid voor Werkervaring */
+.work-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: #eee;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.diplomas-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
