@@ -1,94 +1,123 @@
 :root {
-    --bg-color: #f0f0f0;
-    --card-bg: #ffffff;
-    --text-color: #333;
-    --border-radius: 25px;
-    --shadow: 0 4px 15px rgba(0,0,0,0.05);
+    --bg-blue: #e8f1f8;
+    --card-blue: #6d8db4;
+    --text-blue: #5b7a9d;
+    --line-color: #cbd8e6;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
-    background-color: var(--bg-color);
-    font-family: 'Segoe UI', sans-serif;
-    color: var(--text-color);
-    margin: 0;
-    padding: 20px;
+    background-color: var(--bg-blue);
+    color: var(--text-blue);
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
 }
+
+nav {
+    background-color: var(--card-blue);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: sticky; top: 0; z-index: 1000;
+}
+
+nav a { color: white; text-decoration: none; font-size: 14px; font-weight: bold; }
 
 .container {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 80px auto;
+    padding: 0 40px;
+    position: relative;
+}
+
+section { margin-bottom: 120px; }
+
+.label { font-size: 14px; margin-bottom: 10px; text-decoration: underline; font-weight: bold; }
+h1 { font-size: 42px; color: var(--card-blue); margin: 0 0 30px 0; }
+h2 { font-size: 18px; font-weight: normal; text-decoration: underline; margin-bottom: 25px; }
+
+.subtle-hr { border: none; border-top: 2px solid var(--line-color); margin: 80px 0; }
+
+.profile-grid { display: flex; gap: 60px; align-items: center; }
+.profile-info { flex: 1.5; font-size: 16px; line-height: 1.8; }
+.profile-image img { width: 350px; border-radius: 8px; display: block; }
+
+/* Diploma Sectie Asymmetrisch */
+.diploma-header-container { width: 90%; margin-left: auto; }
+.title-right { text-align: right; margin-right: 20px; }
+.diploma-box { width: 90%; margin-left: auto; }
+
+.blue-box {
+    background-color: var(--card-blue);
+    border-radius: 30px;
+    padding: 40px;
+    color: white;
+}
+
+.diploma-row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-/* Bento Box Items */
-.bento-item {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-}
-
-.full-width { grid-column: span 2; }
-
-/* Specifieke styling voor de profielkaart */
-.profile-card {
-    grid-column: span 2;
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: 60px 2fr 1fr 1fr;
     align-items: center;
-}
-
-.profile-img-placeholder {
-    width: 200px;
-    height: 200px;
-    background: #e0e0e0;
-    border-radius: 50%;
-    background-image: url('data:image/png;base64,iVBOR...'); /* Voeg hier je foto toe */
-    background-size: cover;
-}
-
-/* Navigatie */
-.navbar {
-    background: #e5dfdf;
-    padding: 10px;
-    border-radius: 10px;
+    font-size: 15px;
     margin-bottom: 30px;
 }
+.symbol { font-size: 35px; }
 
-.navbar ul {
+/* Universele Rij-Layout voor Werk en Nevenactiviteiten */
+.row-grid {
     display: flex;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #666;
-    font-weight: 500;
-}
-
-/* Grid voor Werkervaring */
-.work-grid {
-    display: flex;
+    align-items: stretch;
     justify-content: space-between;
 }
 
-.icon-box {
-    width: 60px;
-    height: 60px;
-    background: #eee;
-    border-radius: 10px;
-    margin-bottom: 10px;
+.grid-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px 25px;
+    font-size: 13px;
 }
 
+.grid-item img {
+    width: 120px; height: 80px;
+    object-fit: cover; border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
 
-.diplomas-card{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
+.placeholder-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.v-divider-white {
+    width: 2px;
+    background-color: rgba(255,255,255,0.3);
+    margin: 10px 0;
+}
+
+/* Split Sections (Skills / Talen) */
+.split-section { display: flex; gap: 40px; margin-bottom: 120px; }
+.left-side, .right-side { flex: 1; }
+.center-line { width: 2px; background-color: var(--line-color); }
+
+.skill-bullets { list-style: none; padding: 0; }
+.skill-bullets li { margin-bottom: 25px; font-size: 18px; padding-left: 30px; position: relative; }
+.skill-bullets li::before { content: "•"; position: absolute; left: 0; color: var(--card-blue); font-size: 30px; top: -5px; }
+
+.inner-blue-box {
+    background: var(--card-blue);
+    padding: 30px; border-radius: 20px;
+    color: white; font-size: 13px; line-height: 1.7;
+}
+
+/* Decoratie */
+.decor-flower { position: absolute; font-size: 150px; opacity: 0.1; z-index: -1; }
+.flower-top-left { left: -100px; top: 100px; }
+.flower-bottom-right { right: -50px; bottom: 0px; }
+
+@media (max-width: 768px) {
+    .profile-grid, .split-section, .row-grid { flex-direction: column; text-align: center; }
+    .v-divider-white, .center-line { display: none; }
 }

@@ -3,101 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inke Vanherck | Portfolio</title>
+    <title>Inke Vanherck - Portfolio</title>
     <link rel="stylesheet" href="portfolioInke.css">
 </head>
 <body>
 
-<nav class="navbar">
-    <ul>
-        <li><a href="#profiel">Profiel</a></li>
-        <li><a href="#diplomas">Diploma's</a></li>
-        <li><a href="#werkervaring">Werkervaring</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#taal">Taalvaardigheden</a></li>
-        <li><a href="#neven">Nevenactiviteiten</a></li>
-    </ul>
+<nav>
+    <a href="#profiel">Profiel</a>
+    <a href="#diplomas">Diploma's</a>
+    <a href="#werkervaring">Werkervaring</a>
+    <a href="#skills">Skills</a>
+    <a href="#talen">Talen</a>
+    <a href="#andere">Andere vaardigheden</a>
+    <a href="#neven">Nevenactiviteiten</a>
 </nav>
 
-<main class="container">
+<div class="container">
+    <div class="decor-flower flower-top-left"><img src=".idea/goedeblauwebloem.png"></div>
 
-    <section id="profiel" class="bento-item half-width">
-        <div class="profile-text">
-            <h1>Hey, ik ben Inke</h1>
-            <p>Ik ben Vanherck Inke, student digitale vormgeving aan de hogeschool PXL. Ik zou graag willen afstuderen in de design richting. Creativiteit loopt als een rode draad door mijn leven  zowel in school als in mijn vrije tijd.
-                Als jonge 20 jarige kan ik nog verder ontdekken hoe krachtig visuele communicatie kan zijn. Deze passie helpt mij om doordachte ontwerpen te maken die niet alleen mooi zijn, maar ook strategisch werken.</p>
-        </div>
-    </section>
-
-    <section id="profiel-image" class="bento-item half-width">
-        <div class="profile-image-box">
-            <img src="images/portretInke.jpg" alt="Portret van Inke Vanherck">
-        </div>
-
-    </section>
-
-    <section id="diplomas" class="bento-item diplomas-card">
-        <h3>Diploma's</h3>
-        <div class="edu-item">
-            <div class="icon-box"></div>
-            <div>
-                <strong>Biotechnische wetenschappen</strong>
-                <p>middelbaar | biotechnieken</p>
+    <section id="profiel">
+        <p class="label">Profiel</p>
+        <div class="profile-grid">
+            <div class="profile-info">
+                <h1>Hey, ik ben Inke</h1>
+                <p>Ik ben Vanherck Inke, student digitale vormgeving aan de hogeschool PXL. Ik zou graag willen afstuderen in de design richting. Creativiteit loopt als een rode draad door mijn leven zowel in school als in mijn vrije tijd. Als jonge 20 jarige kan ik nog verder ontdekken hoe krachtig visuele communicatie kan zijn. Deze passie helpt mij om doordachte ontwerpen te maken die niet alleen mooi zijn, maar ook strategisch werken.</p>
             </div>
-        </div>
-        <div class="edu-item">
-            <div class="icon-box"></div>
-            <div>
-                <strong>Digitale vormgeving</strong>
-                <p>hogeschool | PXL</p>
+            <div class="profile-image">
+                <img src="https://via.placeholder.com/400x300/1a4a1a/ffffff?text=Profielfoto+Inke" alt="Inke">
             </div>
         </div>
     </section>
 
+    <hr class="subtle-hr">
 
-
-    <section id="werkervaring" class="bento-item full-width work-experience">
-        <div class="work-grid">
-            <div class="work-item">
-                <div class="icon-box"></div>
-                <p>Zaalbediende<br><span>2021 - nu</span></p>
+    <section id="diplomas" class="diploma-section">
+        <div class="diploma-header-container">
+            <h2 class="title-right">Diploma's</h2>
+        </div>
+        <div class="blue-box diploma-box">
+            <div class="diploma-row">
+                <span class="symbol">🎓</span>
+                <div class="desc"><strong>Biotechnische wetenschappen</strong><br><span>middelbaar</span></div>
+                <div class="meta">biotechnicum</div>
+                <div class="date">2017-2023</div>
             </div>
-            <div class="work-item">
-                <div class="icon-box"></div>
+            <div class="diploma-row">
+                <span class="symbol">🏫</span>
+                <div class="desc"><strong>Digitale vormgeving</strong><br><span>hogeschool</span></div>
+                <div class="meta">PXL</div>
+                <div class="date">2025-...</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="werkervaring">
+        <h2 class="title-left">Werkervaring</h2>
+        <div class="blue-box row-grid">
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/120x80/333/fff?text=Zaal" alt="Zaal">
+                <p>Zaalbediende<br><span>2025 - nu</span></p>
+            </div>
+            <div class="v-divider-white"></div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/120x80/333/fff?text=Winkel" alt="Winkel">
                 <p>Winkelbediende<br><span>2019 - nu</span></p>
             </div>
-            <div class="work-item">
-                <div class="icon-box"></div>
-                <p>Babysitter<br><span>2023 - nu</span></p>
+            <div class="v-divider-white"></div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/120x80/333/fff?text=Babysit" alt="Babysit">
+                <p>Babysitten<br><span>2023 - nu</span></p>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="bento-item half-width">
-        <h3>Skills</h3>
-        <ul>
-            <li>Photoshop</li>
-            <li>Illustrator</li>
-            <li>UI Design</li>
-            <li>Scripting</li>
-            <li>Web</li>
-        </ul>
+    <hr class="subtle-hr">
+
+    <div class="split-section">
+        <section class="left-side" id="skills">
+            <h2 class="title-left">Skills</h2>
+            <ul class="skill-bullets">
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>UI Design</li>
+                <li>Scripting</li>
+                <li>Web</li>
+            </ul>
+        </section>
+        <div class="center-line"></div>
+        <section class="right-side" id="talen">
+            <h2 class="title-left">Taalvaardigheden</h2>
+            <div class="inner-blue-box">
+                <p>tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst</p>
+            </div>
+        </section>
+    </div>
+
+    <hr class="subtle-hr">
+
+    <div class="split-section" id="andere">
+        <section class="left-side">
+            <h2 class="title-left">Andere vaardigheden</h2>
+            <div class="inner-blue-box">
+                <p>tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst</p>
+            </div>
+        </section>
+        <div class="right-side"></div>
+    </div>
+
+    <hr class="subtle-hr">
+
+    <section id="neven">
+        <h2 class="title-left">nevenactiviteiten</h2>
+        <div class="blue-box row-grid">
+            <div class="grid-item">
+                <div class="placeholder-icon">🔵</div>
+                <p><strong>Bal tropical</strong><br><span>Lid van SJVK Bal tropical voor chiro Kaulille. Dit is een jaarlijks evenement.</span></p>
+            </div>
+            <div class="v-divider-white"></div>
+            <div class="grid-item">
+                <div class="placeholder-icon">⚓</div>
+                <p><strong>Chiro</strong><br><span>Ik heb 10 jaar bij de chiro gezeten als lid en 2 jaar als leiding.</span></p>
+            </div>
+            <div class="v-divider-white"></div>
+            <div class="grid-item">
+                <div class="placeholder-icon">🏊</div>
+                <p><strong>Zwemmen</strong><br><span>In mijn vrije tijd ga ik graag zwemmen.</span></p>
+            </div>
+        </div>
     </section>
 
-    <section id="taal" class="bento-item half-width">
-        <h3>Taalvaardigheden</h3>
-        <p>Nederlands (Moedertaal), Engels (Vloeiend), Frans (Basis)...</p>
-    </section>
-
-    <section id="nevenactiviteiten" class="bento-item full-width">
-        <h3>Nevenactiviteiten</h3>
-        <ul>
-            <li>Bal tropical</li>
-            <li>Chiro</li>
-            <li>Zwemmen</li>
-        </ul>
-    </section>
-</main>
+    <div style="height: 150px;"></div>
+</div>
 
 </body>
 </html>
