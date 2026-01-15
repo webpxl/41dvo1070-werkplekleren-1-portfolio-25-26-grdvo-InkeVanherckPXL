@@ -121,3 +121,45 @@ h2 { font-size: 18px; font-weight: normal; text-decoration: underline; margin-bo
     .profile-grid, .split-section, .row-grid { flex-direction: column; text-align: center; }
     .v-divider-white, .center-line { display: none; }
 }
+
+.motivation-blue {
+    background-color: #DDEBFA; /* De blauwe invulkleur */
+    border-radius: 30px;      /* De kenmerkende afgeronde hoeken */
+    padding: 30px;
+    border: none;             /* Geen rand nodig door de kleurvulling */
+}
+
+.motivation-blue h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #1A365D;           /* Iets donkerder blauw voor leesbaarheid */
+    font-size: 1.2rem;
+}
+
+.motivation-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.motivation-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #B2D7FF; /* Een accent-blauw voor de icoon-boxen */
+    border-radius: 12px;       /* Iets minder rond dan de grote box */
+    flex-shrink: 0;
+}
+
+.motivation-text strong {
+    display: block;
+    font-size: 1rem;
+    color: #1A365D;
+}
+
+.motivation-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #4A5568;
+    line-height: 1.4;
+}
