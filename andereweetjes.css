@@ -65,10 +65,6 @@ body {
     display: block;
 }
 
-.profile-info h2 {
-    color: var(--card-blue);
-    margin-bottom: 15px;
-}
 
 .profile-info p {
     line-height: 1.6;
