@@ -1,0 +1,228 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Dit kapt alles af wat buiten het scherm steekt */
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%; /* Zorgt dat afbeeldingen nooit breder worden dan hun container */
+    height: auto;
+}
+.personal-project-card {
+    background-color: white; /* Wit in plaats van blauw */
+    border: 3px solid var(--card-blue); /* Blauwe rand voor herkenbaarheid */
+    border-radius: 30px;
+    padding: 40px;
+    position: relative;
+    margin-top: 40px;
+    box-shadow: 0 10px 20px rgba(109, 141, 180, 0.1); /* Zachte schaduw */
+}
+
+.personal-badge {
+    position: absolute;
+    top: -15px;
+    left: 40px;
+    background-color: var(--card-blue);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-flex-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.project-info h3 {
+    color: var(--card-blue);
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.project-info p {
+    color: var(--text-blue);
+    line-height: 1.6;
+}
+
+.tools-tag {
+    background-color: var(--bg-blue);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.project-img-wrapper img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Mobiel vriendelijk maken */
+@media (max-width: 768px) {
+    .project-flex-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .project-img-wrapper img {
+        width: 100%;
+    }
+}
+
+/* Zorg dat de body de hele hoogte van het scherm gebruikt */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* De container vult de beschikbare ruimte op, zodat de footer omlaag wordt geduwd */
+.container {
+    flex: 1;
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+/* De Footer neemt nu de volledige breedte in */
+footer {
+    background-color: var(--card-blue);
+    color: white;
+    width: 100%; /* Volledige breedte */
+    padding: 60px 0 0 0;
+    margin-top: auto; /* Zorgt dat de footer altijd onderaan staat */
+}
+
+.footer-inner-content {
+    max-width: 1000px; /* Inhoud van de footer lijnt wel uit met je site */
+    margin: 0 auto;
+    padding: 0 40px 40px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h3 { margin: 0 0 10px 0; font-size: 22px; }
+.footer-column h4 { margin: 0 0 15px 0; font-size: 16px; text-transform: uppercase; opacity: 0.9; }
+.footer-column p, .footer-column a { color: white; text-decoration: none; font-size: 14px; margin: 5px 0; }
+
+.social-links { display: flex; gap: 10px; }
+.social-links a {
+    background: rgba(255,255,255,0.1);
+    padding: 5px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.social-links a:hover { background: rgba(255,255,255,0.2); }
+
+.footer-copyright {
+    background-color: rgba(0,0,0,0.1); /* Iets donkerder strookje onderaan */
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+    width: 100%;
+}
+
+/* Mobiel */
+@media (max-width: 768px) {
+    .footer-inner-content {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .social-links { justify-content: center; }
+}
+
+/* Container aanpassing */
+.container {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto; /* Iets minder margin op kleine schermen */
+    padding: 0 20px;   /* Iets minder padding aan de zijkanten */
+}
+
+/* De Grid voor de projecten */
+.profile-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Zorg dat de projecten onder elkaar springen op mobiel */
+@media (max-width: 768px) {
+    .profile-grid,
+    .profile-grid[style*="flex-direction: row-reverse"] {
+        flex-direction: column !important; /* Forceer kolom op mobiel */
+        text-align: center;
+    }
+
+    .profile-image, .profile-info {
+        width: 100%;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 28px; /* Maak titels iets kleiner op mobiel */
+    }
+}
+
+/* Footer styling correctie */
+footer {
+    background-color: var(--card-blue);
+    color: white;
+    width: 100%;
+    padding: 60px 0 0 0;
+    margin-top: auto;
+}
+footer {
+    background-color: #6D8DB4; /* Gebruik je var(--card-blue) */
+    color: white;
+    width: 100vw; /* Forceert volledige viewport breedte */
+    margin-left: calc(-50vw + 50%); /* Centerert de full-width footer mocht hij in een container zitten */
+    left: 0;
+    position: relative;
+}
+
+/* Omdat we de footer uit de container hebben gehaald,
+   moeten we de binnenkant weer centreren */
+.footer-inner-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Zorgt voor responsiveness op mobiel */
+    gap: 30px;
+}
+
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.1);
+    padding: 20px 0;
+}
