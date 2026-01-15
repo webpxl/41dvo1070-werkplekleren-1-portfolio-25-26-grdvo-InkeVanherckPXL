@@ -38,7 +38,7 @@ body {
     position: relative;
 }
 
-
+/* --- 3. Project Cards Styling --- */
 .project-card {
     background-color: white;
     border: 3px solid var(--card-blue);
@@ -76,7 +76,7 @@ body {
     margin-bottom: 10px;
 }
 
-
+/* --- 4. Footer Styling (Full Width) --- */
 footer {
     background-color: var(--card-blue);
     color: white;
@@ -118,7 +118,7 @@ footer {
     opacity: 0.7;
 }
 
-
+/* --- 5. Responsiveness (Mobiel & Tablet) --- */
 @media (max-width: 768px) {
     .container {
         margin: 30px auto;

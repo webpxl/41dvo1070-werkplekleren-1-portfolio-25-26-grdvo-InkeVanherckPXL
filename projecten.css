@@ -1,26 +1,67 @@
-/* Styling voor Buitenschoolse Projecten */
+/* --- RESET & BASIS --- */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Nodig voor de flexbox berekening */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Zorgt dat de body altijd minstens het hele scherm vult */
+    font-family: Arial, sans-serif; /* Of je eigen gekozen font */
+}
+
+/* --- NAVIGATIE --- */
+nav {
+    width: 100%;
+    padding: 20px;
+    background: #6D8DB4;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* --- DE CONTENT CONTAINER --- */
+.container {
+    flex: 1; /* DIT DUWT DE FOOTER NAAR BENEDEN: neemt alle beschikbare ruimte in */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; /* Centreert de inhoud */
+    padding: 80px 40px;
+}
+
+/* --- PROJECT CARDS --- */
 .personal-project-card {
-    background-color: white; /* Wit in plaats van blauw */
-    border: 3px solid var(--card-blue); /* Blauwe rand voor herkenbaarheid */
+    background-color: white;
+    border: 3px solid #6D8DB4;
     border-radius: 30px;
     padding: 40px;
     position: relative;
     margin-top: 40px;
-    box-shadow: 0 10px 20px rgba(109, 141, 180, 0.1); /* Zachte schaduw */
+    box-shadow: 0 10px 20px rgba(109, 141, 180, 0.1);
 }
 
 .personal-badge {
     position: absolute;
     top: -15px;
     left: 40px;
-    background-color: var(--card-blue);
+    background-color: #B2D7FF;
     color: white;
     padding: 5px 20px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .project-flex-container {
@@ -29,72 +70,36 @@
     align-items: center;
 }
 
-.project-info h3 {
-    color: var(--card-blue);
-    font-size: 24px;
-    margin-top: 0;
-}
-
-.project-info p {
-    color: var(--text-blue);
-    line-height: 1.6;
-}
-
-.tools-tag {
-    background-color: var(--bg-blue);
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 8px;
-    font-size: 14px;
-}
-
 .project-img-wrapper img {
     width: 350px;
     height: auto;
     border-radius: 15px;
-    display: block;
 }
 
-/* Mobiel vriendelijk maken */
-@media (max-width: 768px) {
-    .project-flex-container {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    .project-img-wrapper img {
-        width: 100%;
-    }
+.blue-box {
+    background-color: #6D8DB4;
+    padding: 30px;
+    border-radius: 20px;
 }
 
-/* Zorg dat de body de hele hoogte van het scherm gebruikt */
-body {
+.profile-grid {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+    gap: 30px;
+    align-items: center;
 }
 
-/* De container vult de beschikbare ruimte op, zodat de footer omlaag wordt geduwd */
-.container {
-    flex: 1;
-    max-width: 1000px;
-    margin: 80px auto;
-    padding: 0 40px;
-}
-
-/* De Footer neemt nu de volledige breedte in */
+/* --- DE FOOTER (VOLLEDIGE BREEDTE) --- */
 footer {
-    background-color: var(--card-blue);
+    width: 100%; /* Neemt de volledige breedte van het scherm */
+    background-color: #6D8DB4; /* Of gebruik var(--card-blue) */
     color: white;
-    width: 100%; /* Volledige breedte */
-    padding: 60px 0 0 0;
-    margin-top: auto; /* Zorgt dat de footer altijd onderaan staat */
+    margin-top: auto; /* Zorgt dat de footer altijd de bodem raakt */
 }
 
 .footer-inner-content {
-    max-width: 1000px; /* Inhoud van de footer lijnt wel uit met je site */
+    max-width: 1000px; /* Houdt de tekst uitgelijnd met je container */
     margin: 0 auto;
-    padding: 0 40px 40px 40px;
+    padding: 60px 40px;
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -104,34 +109,48 @@ footer {
     flex: 1;
 }
 
-.footer-column h3 { margin: 0 0 10px 0; font-size: 22px; }
-.footer-column h4 { margin: 0 0 15px 0; font-size: 16px; text-transform: uppercase; opacity: 0.9; }
-.footer-column p, .footer-column a { color: white; text-decoration: none; font-size: 14px; margin: 5px 0; }
-
-.social-links { display: flex; gap: 10px; }
-.social-links a {
-    background: rgba(255,255,255,0.1);
-    padding: 5px 12px;
-    border-radius: 5px;
-    transition: 0.3s;
+.footer-column h3, .footer-column h4 {
+    margin-top: 0;
 }
-.social-links a:hover { background: rgba(255,255,255,0.2); }
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
 
 .footer-copyright {
-    background-color: rgba(0,0,0,0.1); /* Iets donkerder strookje onderaan */
+    background-color: rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
     font-size: 12px;
-    opacity: 0.7;
     width: 100%;
 }
 
-/* Mobiel */
+/* --- MOBIEL --- */
 @media (max-width: 768px) {
-    .footer-inner-content {
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 20px;
+    .container {
+        padding: 40px 20px;
     }
-    .social-links { justify-content: center; }
+
+    .project-flex-container,
+    .profile-grid,
+    .footer-inner-content {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .project-img-wrapper img,
+    .profile-image img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
 }
