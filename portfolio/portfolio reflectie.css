@@ -1,0 +1,50 @@
+
+/* Simpele basis */
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Titels zonder extra dikte */
+h1, h2 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 30px;
+    text-decoration: underline; /* Onderstreept om onderscheid te maken */
+}
+
+/* Tekst */
+p {
+    margin: 0 0 15px 0;
+}
+
+header {
+    margin-bottom: 40px;
+}
+a {
+    color: #0056b3;
+    text-decoration: none;
+    border: 1px solid #0056b3;
+    padding: 5px 10px;
+}
+
+a:hover {
+    background-color: #f4f4f4;
+}
